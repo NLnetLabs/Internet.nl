@@ -1648,6 +1648,9 @@ msgstr "Je webserver biedt *geen* Referrer-Policy aan."
 msgid "detail web appsecpriv http-referrer-policy verdict good"
 msgstr "Je webserver biedt Referrer-Policy aan."
 
+msgid "detail web appsecpriv http-referrer-policy verdict info"
+msgstr "Je webserver biedt Referrer-Policy aan. DigID uitleg hier."
+
 msgid "detail web appsecpriv http-x-content-type exp"
 msgstr ""
 "We testen of je webserver een HTTP header voor `X-Content-Type-Options` aanbiedt. Met deze HTTP header kan je webbrowsers laten weten dat zij geen 'MIME type sniffing' mogen uitvoeren en altijd het `Content-Type` zoals gedeclareerd door jouw webserver moeten volgen. De enige geldige waarde voor deze HTTP header is `nosniff`. Indien actief, dan zal een browser verzoeken voor `style` en `scipt` blokkeren als deze geen corresponderende `Content-Type` (dat wil zeggen `text/css` of een 'Javascript MIME type' zoals `application/javascript`) hebben.\n"

@@ -659,6 +659,15 @@ class HeaderCheckerReferrerPolicy(object):
                     score = scoring.WEB_APPSECPRIV_REFERRER_POLICY_BAD
                     results['referrer_policy_score'] = score
                     results['referrer_policy_enabled'] = False
+                else:
+                # has one of the above values, which is good. let's check more strict values
+                    if value.lower() not in [
+                            'no-referrer',
+                            'same-origin',
+                            ]:
+                        score = scoring.WEB_APPSECPRIV_REFERRER_POLICY_INFO
+                        results['referrer_policy_score'] = score
+                        results['referrer_policy_enabled'] = True
             results['referrer_policy_values'].extend(values)
 
     def get_positive_values(self):

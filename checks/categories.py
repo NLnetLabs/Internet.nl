@@ -2079,6 +2079,12 @@ class WebAppsecprivHttpReferrerPolicy(Subtest):
             "detail web appsecpriv http-referrer-policy verdict good")
         self.tech_data = tech_data
 
+    def result_info(self, tech_data):
+        self._status(STATUS_INFO)
+        self.verdict = (
+            "detail web appsecpriv http-referrer-policy verdict info")
+        self.tech_data = tech_data
+
     def result_bad(self, tech_data):
         self._status(STATUS_FAIL)
         self.verdict = (

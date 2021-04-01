@@ -17,6 +17,7 @@ from .shared import results_per_domain, aggregate_subreports
 from .. import categories
 from .. import batch, batch_shared_task
 from ..models import WebTestAppsecpriv, DomainTestAppsecpriv
+from .. import scoring
 
 
 @shared_task(bind=True)
@@ -162,8 +163,12 @@ def build_report(model, category):
         #        model.x_xss_protection_values)
 
         if model.referrer_policy_enabled:
-            category.subtests['http_referrer_policy'].result_good(
-                model.referrer_policy_values)
+            if model.referrer_policy_score == WEB_APPSECPRIV_REFERRER_POLICY_INFO:
+                category.subtests['http_referrer_policy'].result_info(
+                    model.referrer_policy_values)
+            else:
+                category.subtests['http_referrer_policy'].result_good(
+                    model.referrer_policy_values)
         else:
             category.subtests['http_referrer_policy'].result_bad(
                 model.referrer_policy_values)

@@ -112,6 +112,9 @@ msgstr "Knowledge base"
 msgid "base followtwitter"
 msgstr "Follow us on Twitter"
 
+msgid "base followlinkedin"
+msgstr "Follow us on LinkedIn"
+
 msgid "base halloffame"
 msgstr "Hall of Fame"
 
@@ -1642,6 +1645,9 @@ msgstr "Your web server does *not* offer Referrer-Policy."
 
 msgid "detail web appsecpriv http-referrer-policy verdict good"
 msgstr "Your web server offers Referrer-Policy."
+
+msgid "detail web appsecpriv http-referrer-policy verdict info"
+msgstr "Your web server offers Referrer-Policy. DigID explanation goes here."
 
 msgid "detail web appsecpriv http-x-content-type exp"
 msgstr ""
