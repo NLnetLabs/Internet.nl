@@ -438,6 +438,7 @@ class DomainTestTls(BaseTestModel):
     cipher_order_score = models.IntegerField(null=True)
 
     protocols_bad = ListField(null=True)
+    protocols_good = ListField(null=True)
     protocols_phase_out = ListField(null=True)
     protocols_score = models.IntegerField(null=True)
 
@@ -504,7 +505,7 @@ class DomainTestTls(BaseTestModel):
             'hsts_score', 'cert_chain', 'cert_trusted', 'cert_trusted_score',
             'cert_pubkey_bad', 'cert_pubkey_phase_out', 'cert_pubkey_score',
             'cert_signature_bad', 'cert_signature_score', 'cert_hostmatch_bad',
-            'cert_hostmatch_score', 'score',
+            'cert_hostmatch_score', 'score', 'protocols_good',
         ]
 
     def get_web_api_details(self):

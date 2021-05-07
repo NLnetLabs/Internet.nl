@@ -862,10 +862,10 @@ class WebTlsVersion(Subtest):
             full_score=scoring.WEB_TLS_PROTOCOLS_GOOD,
             model_score_field="protocols_score")
 
-    def result_good(self):
+    def result_good(self,tech_data):
         self._status(STATUS_SUCCESS)
         self.verdict = "detail web tls version verdict good"
-        self.tech_data = ""
+        self.tech_data = tech_data
 
     def result_phase_out(self, tech_data):
         self._status(STATUS_NOTICE)

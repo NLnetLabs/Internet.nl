@@ -109,7 +109,9 @@ def render_details_table(headers, arguments):
                             'detail tech data not-testable',
                             'detail tech data not-reachable',
                             'detail tech data phase-out',
-                            'detail tech data insufficient']:
+                            'detail tech data sufficient',
+                            'detail tech data insufficient'
+                            ]:
                         value = _(value)
                     row.append(value)
                 else:
